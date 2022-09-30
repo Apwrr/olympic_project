@@ -67,14 +67,17 @@ class _BoxingPageState extends State<BoxingPage> {
                       Image.asset('assets/image/flag_ireland.png',
                           width: 50.00),
                       Text('  IRELAND', style: TextStyle(fontSize: 25.0)),
-                      SizedBox(width: 1620.0),
-                      chack2 == true ?Icon(Icons.done,color: Colors.green,size: 50.0,)
+                      chack2 == true ?Icon(Icons.done,color: Colors.green,size: 35.0,)
                           : Icon(Icons.arrow_drop_down_outlined,color: Colors.white),
                     ],
                   ),
                   SizedBox(height: 5.0),
-                  Text('HARRINGTON Kellie Anne',
-                      style: TextStyle(fontSize: 15.0)),
+                  Row(
+                    children: [
+                      Text('HARRINGTON Kellie Anne',
+                          style: TextStyle(fontSize: 15.0)),
+                    ],
+                  ),
                 ],
               ),
             ],
@@ -89,13 +92,16 @@ class _BoxingPageState extends State<BoxingPage> {
                       Image.asset('assets/image/flag_Thailand.png',
                           width: 50.00),
                       Text('  THAILAND', style: TextStyle(fontSize: 25.0)),
-                      SizedBox(width: 1600.0),
-                      chack1 == true ?Icon(Icons.done,color: Colors.green,size: 50.0,)
+                      chack1 == true ?Icon(Icons.done,color: Colors.green,size: 35.0,)
                           : Icon(Icons.arrow_drop_down_outlined,color: Colors.white),
                     ],
                   ),
                   SizedBox(height: 5.0),
-                  Text('SEESONDEE Sudaporn', style: TextStyle(fontSize: 15.0)),
+                  Row(
+                    children: [
+                      Text('SEESONDEE Sudaporn', style: TextStyle(fontSize: 15.0)),
+                    ],
+                  ),
                 ],
               ),
             ],
