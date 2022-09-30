@@ -145,7 +145,6 @@ class _BoxingPageState extends State<BoxingPage> {
           SizedBox(height: 370.0),
           Row(
             children: [
-
               //Red
               if(count < 3)
               Expanded(
