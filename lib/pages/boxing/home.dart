@@ -17,6 +17,8 @@ class _BoxingPageState extends State<BoxingPage> {
   var Total = '';
   var sumR = '';
   var sumB = '';
+  var chack1 = false;
+  var chack2 = false;
 
 
   @override
@@ -65,6 +67,9 @@ class _BoxingPageState extends State<BoxingPage> {
                       Image.asset('assets/image/flag_ireland.png',
                           width: 50.00),
                       Text('  IRELAND', style: TextStyle(fontSize: 25.0)),
+                      SizedBox(width: 1620.0),
+                      chack2 == true ?Icon(Icons.done,color: Colors.green,size: 50.0,)
+                          : Icon(Icons.arrow_drop_down_outlined,color: Colors.white),
                     ],
                   ),
                   SizedBox(height: 5.0),
@@ -84,6 +89,9 @@ class _BoxingPageState extends State<BoxingPage> {
                       Image.asset('assets/image/flag_Thailand.png',
                           width: 50.00),
                       Text('  THAILAND', style: TextStyle(fontSize: 25.0)),
+                      SizedBox(width: 1600.0),
+                      chack1 == true ?Icon(Icons.done,color: Colors.green,size: 50.0,)
+                          : Icon(Icons.arrow_drop_down_outlined,color: Colors.white),
                     ],
                   ),
                   SizedBox(height: 5.0),
@@ -142,7 +150,7 @@ class _BoxingPageState extends State<BoxingPage> {
               Text(sumB,style: TextStyle(fontSize: 30.0)),
             ],
           ),
-          SizedBox(height: 370.0),
+          SizedBox(height: 340.0),
           Row(
             children: [
               //Red
@@ -183,6 +191,7 @@ class _BoxingPageState extends State<BoxingPage> {
                         Total = 'TOTAL';
                         sumR = ReslutRed.toString();
                         sumB = ReslutBlue.toString();
+                        ReslutRed > ReslutBlue ? chack2 = true : chack2 = false;
                       }
                     });
                   },
@@ -229,6 +238,7 @@ class _BoxingPageState extends State<BoxingPage> {
                         Total = 'TOTAL';
                         sumR = ReslutRed.toString();
                         sumB = ReslutBlue.toString();
+                        ReslutBlue > ReslutRed ? chack1 = true : chack1 = false;
                       }
                     });
                   },
@@ -250,6 +260,7 @@ class _BoxingPageState extends State<BoxingPage> {
                           Blue1 = '';   Blue2 = '';   Blue3 = '';
                           Red1 = '';    Red2 = '';    Red3 = '';
                           Total = '';   sumR = '';    sumB = '';
+                          chack1 = false; chack2 = false;
                         });
                       },
                       child: Icon(Icons.close),
